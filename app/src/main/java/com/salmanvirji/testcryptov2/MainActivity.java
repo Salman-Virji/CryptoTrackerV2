@@ -28,7 +28,9 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private ArrayList<Crypto> Crypto = new ArrayList<>();
+    private DBHandler dbHandler;
     private RecyclerView recyclerView;
     TextView coin;
     Button btn2;
