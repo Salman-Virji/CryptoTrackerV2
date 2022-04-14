@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,38 +29,52 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Crypto> Crypto = new ArrayList<>();
+    public ArrayList<Crypto> Crypto = new ArrayList<>();
+    public ArrayList<String> arr = new ArrayList<>();
+
     private RecyclerView recyclerView;
     TextView coin;
-    Button btn2;
+    Button btn2 ,btnfav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn2 =(Button) findViewById(R.id.button2);
-        btn2.setOnClickListener(v -> openFavs());
+
 
 
         //coin =findViewById(R.id.textView9);
         recyclerView = findViewById(R.id.recyclerView);
 
         Crypto = new ArrayList<>();
+        arr = new ArrayList<>();
         getCrypto();
         setAdapter();
 
+
+
+        btn2 =(Button) findViewById(R.id.button2);
+        btn2.setOnClickListener(v -> openFavs());
         //System.out.println("Crypto: "+ Crypto.get(0));
         //coin.setText(Crypto.get(0).getName());
-
+        //btnfav =(Button) findViewById(R.id.button5);
+        //btnfav.setOnClickListener(v -> readCrypto());
 
     }
 
     public void openFavs(){
-        Intent intent = new Intent(this, Favorites.class);
-        startActivity(intent);
+
+
+        Intent intent1 = new Intent(this, Favorites.class);
+        intent1.putParcelableArrayListExtra("Crypto", Crypto);
+
+
+        startActivity(intent1);
         finish();
     }
+
+
 
     private void setAdapter() {
         recyclerAdapter adapter = new recyclerAdapter(Crypto);
@@ -70,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void getCrypto() {
+    public void getCrypto() {
+
         Crypto.clear();
         /*Crypto.add(new Crypto("Hello1"));
         Crypto.add(new Crypto("Hello2"));
@@ -83,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto("Hello4"));
         Crypto.add(new Crypto("Hello5"));*/
 
+       /*
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
@@ -91,12 +108,14 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));*/
+
+        Crypto.add(new Crypto(" Nameq ","Symbol ",1));
 
 
 
-        Crypto.add(new Crypto(" "," ",1));
+        //arr.add( Crypto.get(0).getPrice());
+
 
        String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -118,12 +137,11 @@ public class MainActivity extends AppCompatActivity {
                                 double priceToCAD =  (price * 1.26);
                                 double priceRounded = Math.round(priceToCAD);
                                 Crypto.add(new Crypto(name,symbol,priceRounded));
+                                arr.add(name);
+                                arr.add(symbol);
 
-                                    if(Crypto.isEmpty()){
-                                        System.out.println("EMPTY");
-                                    }else{
-                                        System.out.println("Crypto1: "+ Crypto.get(0));
-                                    }
+                                arr.add(Double.toString(priceRounded));
+
 
                                 //
 
@@ -148,9 +166,16 @@ public class MainActivity extends AppCompatActivity {
                 return headers;
             }
 
+
+
+
         };
         queue.add(jsonObjectRequest);
+
+
     }
+
+
 }
 
 
