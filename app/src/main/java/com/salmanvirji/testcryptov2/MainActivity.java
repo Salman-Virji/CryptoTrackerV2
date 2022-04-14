@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -28,11 +31,17 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Crypto> Crypto = new ArrayList<>();
     private RecyclerView recyclerView;
     TextView coin;
+    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn2 =(Button) findViewById(R.id.button2);
+        btn2.setOnClickListener(v -> openFavs());
+
+
         //coin =findViewById(R.id.textView9);
         recyclerView = findViewById(R.id.recyclerView);
 
@@ -44,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         //coin.setText(Crypto.get(0).getName());
 
 
+    }
+
+    public void openFavs(){
+        Intent intent = new Intent(this, Favorites.class);
+        startActivity(intent);
+        finish();
     }
 
     private void setAdapter() {
