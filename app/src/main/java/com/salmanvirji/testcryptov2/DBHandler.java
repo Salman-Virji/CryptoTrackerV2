@@ -55,22 +55,22 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void removeAllFavItem() {
-
-    }
-
     public ArrayList<String> readFavItems() {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursorFav = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        //Cursor cursorFav = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursorFav = db.query(
+          TABLE_NAME, null, null, null, null, null, null
+        );
 
         ArrayList<String> cryptoFavArrayList = new ArrayList<>();
 
-        if (cursorFav.moveToFirst()) {
-            do {
-                cryptoFavArrayList.add(new String());
-            } while (cursorFav.moveToNext());
-        }
+        cursorFav.moveToFirst();
+        while (cursorFav.moveToNext()) {
+            String itemName = cursorFav.getString(
+                    cursorFav.getColumnIndexOrThrow(FAV_COLUMN));
+            cryptoFavArrayList.add(itemName);
+        };
 
         cursorFav.close();
         return cryptoFavArrayList;

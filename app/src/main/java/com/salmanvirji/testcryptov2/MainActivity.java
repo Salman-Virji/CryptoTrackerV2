@@ -89,15 +89,15 @@ public class MainActivity extends AppCompatActivity {
 
         Crypto.clear();
 
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123 ","23 ",1));
+        Crypto.add(new Crypto(" 124 ","24 ",1));
+        Crypto.add(new Crypto(" 124 ","25 ",1));
+        Crypto.add(new Crypto(" 125 ","26 ",1));
+        Crypto.add(new Crypto(" 126 ","27 ",1));
+        Crypto.add(new Crypto(" 127 ","28 ",1));
+        Crypto.add(new Crypto(" 127 ","29 ",1));
+        Crypto.add(new Crypto(" 128 ","22 ",1));
+        Crypto.add(new Crypto(" Test ","23 ",1));
 
         Crypto.add(new Crypto(" Nameq ","Symbol ",1));
 
