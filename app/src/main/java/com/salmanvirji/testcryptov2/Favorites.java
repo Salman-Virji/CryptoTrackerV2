@@ -1,5 +1,7 @@
 package com.salmanvirji.testcryptov2;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -14,11 +16,16 @@ public class Favorites extends AppCompatActivity {
 
     TextView txtSymbol , txtName,txtPrice,txtInput;
     Button button;
-    ArrayList<Crypto> q = new ArrayList<>();
+    ArrayList<Crypto> cryptoArr = new ArrayList<>();
+    private DBHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fav_items);
+
+        dbHandler = new DBHandler(Favorites.this);
+
         txtSymbol =(TextView)findViewById(R.id.textView3);
         txtName =(TextView)findViewById(R.id.txtSymbol);
         txtPrice =(TextView)findViewById(R.id.txtPrice);
@@ -28,7 +35,7 @@ public class Favorites extends AppCompatActivity {
         //get the bundle
         Bundle b = getIntent().getExtras();
         //getting the arraylist from the key
-        q =  b.getParcelableArrayList("Crypto");
+        cryptoArr =  b.getParcelableArrayList("Crypto");
 
 
         //Log.i("List", "size :: "+ q.get(2).getSymbol().toString());
@@ -42,29 +49,46 @@ public class Favorites extends AppCompatActivity {
 
 
     public void setFavs(){
-        ArrayList<String> arr =new ArrayList<>();
+        // array for favourites
+        ArrayList<String> favArr = getTable();
 
-        arr.add("Bitcoin");
-        arr.add("Tether");
+        //favArr.add("Bitcoin");
 
-
-        //arr. = txtInput.getText().toString();
-        int i =0;
-        for(int w =0 ; w<q.size(); w++){
-            for(int r = 0; r<arr.size(); r++){
-                if(q.get(w).getName().equals(arr.get(r)))
+        // comparing crypto array with fav list
+        int i = 0;
+        for(int w = 0 ; w < cryptoArr.size(); w++){
+            for(int r = 0; r < favArr.size(); r++){
+                if(cryptoArr.get(w).getName().equals(favArr.get(r)))
                     i=w;
-                txtName.setText(q.get(i).getName());
-                txtSymbol.setText(q.get(i).getSymbol());
-                txtPrice.setText(Double.toString(q.get(i).getPrice()));
+
+                txtName.setText(cryptoArr.get(i).getName());
+                txtSymbol.setText(cryptoArr.get(i).getSymbol());
+                txtPrice.setText(Double.toString(cryptoArr.get(i).getPrice()));
 
 
             }
-            }
+        }
+
+    }
+
+    public ArrayList<String> getTable() {
+        // new array for table data
+        ArrayList<String> tableArr = this.dbHandler.readFavItems();
+
+        //SQLiteDatabase db = this.getRead;
+
+        for (int k = 0; k < 5; k++){
+
+            String item = tableArr.get(k);
 
 
 
         }
+
+
+        return tableArr;
+    }
+
 }
 
 

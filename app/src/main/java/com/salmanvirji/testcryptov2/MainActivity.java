@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<Crypto> Crypto = new ArrayList<>();
     public ArrayList<String> arr = new ArrayList<>();
-
+    private DBHandler dbHandler;
     private RecyclerView recyclerView;
     TextView coin;
     Button btn2 ,btnfav;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        dbHandler = new DBHandler(MainActivity.this);
 
 
         //coin =findViewById(R.id.textView9);
@@ -88,18 +88,7 @@ public class MainActivity extends AppCompatActivity {
     public void getCrypto() {
 
         Crypto.clear();
-        /*Crypto.add(new Crypto("Hello1"));
-        Crypto.add(new Crypto("Hello2"));
-        Crypto.add(new Crypto("Hello3"));
-        Crypto.add(new Crypto("Hello4"));
-        Crypto.add(new Crypto("Hello5"));
-        Crypto.add(new Crypto("Hello1"));
-        Crypto.add(new Crypto("Hello2"));
-        Crypto.add(new Crypto("Hello3"));
-        Crypto.add(new Crypto("Hello4"));
-        Crypto.add(new Crypto("Hello5"));*/
 
-       /*
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
@@ -108,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));*/
+        Crypto.add(new Crypto(" 123","23 ",1));
 
         Crypto.add(new Crypto(" Nameq ","Symbol ",1));
 
@@ -117,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         //arr.add( Crypto.get(0).getPrice());
 
 
-       String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
+       /*String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -170,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         };
-        queue.add(jsonObjectRequest);
+        queue.add(jsonObjectRequest);*/
 
 
     }
