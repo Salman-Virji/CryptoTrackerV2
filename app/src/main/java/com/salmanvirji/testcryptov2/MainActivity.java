@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn2;
     Button btn3;
+    Button btnRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
         btn3 =(Button) findViewById(R.id.button3);
         btn3.setOnClickListener(v -> openSettings());
+
+        btnRefresh =(Button) findViewById(R.id.btnRefresh);
+        btnRefresh.setOnClickListener(v -> setAdapter());
+
 
 
     }
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
 
@@ -91,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+/*
      //Place holder values to not use up API limit
        Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
@@ -100,16 +108,17 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));*/
 
 
         // Empty addition to the Crypto ArrayLit to initalize the array
-        Crypto.add(new Crypto("  "," ",1));
+        Crypto.add(new Crypto("Please Refresh  "," ",1));
 
 
 
 
- /*
+
+
         //Reference for api JSON parsing  https://youtu.be/y2xtLqP8dSQ
         //Documentation CMC API: https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest
         //Building the API object
@@ -174,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         };
-        queue.add(jsonObjectRequest); */
+        queue.add(jsonObjectRequest);
 
 
     }

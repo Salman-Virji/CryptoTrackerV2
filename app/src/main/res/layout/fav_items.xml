@@ -119,20 +119,16 @@
         android:id="@+id/button7"
         android:layout_width="64dp"
         android:layout_height="58dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:layout_marginBottom="16dp"
         android:text="Button"
         app:backgroundTint="#881414"
         app:cornerRadius="15dp"
-        app:icon="@android:drawable/ic_menu_manage"
+        app:icon="@android:drawable/ic_dialog_info"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-         />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/txtInput"

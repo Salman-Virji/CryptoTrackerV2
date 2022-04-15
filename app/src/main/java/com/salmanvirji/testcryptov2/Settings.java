@@ -32,6 +32,7 @@ public class Settings extends AppCompatActivity {
 
     public void goHome(){
         Intent intent3 = new Intent(this, MainActivity.class);
+
         startActivity(intent3);
         finish();
     }
