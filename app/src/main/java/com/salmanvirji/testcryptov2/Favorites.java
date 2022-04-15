@@ -27,11 +27,8 @@ public class Favorites extends AppCompatActivity {
 
         //get the bundle
         Bundle b = getIntent().getExtras();
-        //getting the arraylist from the key
+        //getting the arraylist
         q =  b.getParcelableArrayList("Crypto");
-
-
-        //Log.i("List", "size :: "+ q.get(2).getSymbol().toString());
 
         button =(Button) findViewById(R.id.btnEnter);
         button.setOnClickListener(v -> setFavs());
@@ -42,16 +39,19 @@ public class Favorites extends AppCompatActivity {
 
 
     public void setFavs(){
+
         ArrayList<String> arr =new ArrayList<>();
 
         arr.add("Bitcoin");
-        arr.add("Tether");
+        arr.add(" 123");
 
 
-        //arr. = txtInput.getText().toString();
+        //For loop to iterate through the q arraylist which holds the crypto data from the parcelable intent
         int i =0;
         for(int w =0 ; w<q.size(); w++){
+            //Iterating through that array which hold the names of favorited crypto
             for(int r = 0; r<arr.size(); r++){
+                //Matching the arr arraylist with the q array list if a match is found setText
                 if(q.get(w).getName().equals(arr.get(r)))
                     i=w;
                 txtName.setText(q.get(i).getName());
@@ -60,12 +60,11 @@ public class Favorites extends AppCompatActivity {
 
 
             }
-            }
-
-
-
         }
-}
 
+
+
+    }
+}
 
 

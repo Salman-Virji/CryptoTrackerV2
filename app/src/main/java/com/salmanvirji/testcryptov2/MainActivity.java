@@ -30,52 +30,41 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     public ArrayList<Crypto> Crypto = new ArrayList<>();
-    public ArrayList<String> arr = new ArrayList<>();
+
 
     private RecyclerView recyclerView;
-    TextView coin;
-    Button btn2 ,btnfav;
+
+    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
-        //coin =findViewById(R.id.textView9);
         recyclerView = findViewById(R.id.recyclerView);
-
         Crypto = new ArrayList<>();
-        arr = new ArrayList<>();
         getCrypto();
         setAdapter();
-
-
-
         btn2 =(Button) findViewById(R.id.button2);
         btn2.setOnClickListener(v -> openFavs());
-        //System.out.println("Crypto: "+ Crypto.get(0));
-        //coin.setText(Crypto.get(0).getName());
-        //btnfav =(Button) findViewById(R.id.button5);
-        //btnfav.setOnClickListener(v -> readCrypto());
+
 
     }
 
+
+
     public void openFavs(){
-
-
+        // Intent to open the favorites screen
         Intent intent1 = new Intent(this, Favorites.class);
+        //passing the Crypto array with the intent as a parcelable
         intent1.putParcelableArrayListExtra("Crypto", Crypto);
-
-
         startActivity(intent1);
         finish();
     }
 
 
 
+    //Adapter for the RecycleViewer
+    //Reference: https://developer.android.com/guide/topics/ui/layout/recyclerview
     private void setAdapter() {
         recyclerAdapter adapter = new recyclerAdapter(Crypto);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -86,68 +75,71 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void getCrypto() {
-
+        //Clear the list of all values
         Crypto.clear();
-        /*Crypto.add(new Crypto("Hello1"));
-        Crypto.add(new Crypto("Hello2"));
-        Crypto.add(new Crypto("Hello3"));
-        Crypto.add(new Crypto("Hello4"));
-        Crypto.add(new Crypto("Hello5"));
-        Crypto.add(new Crypto("Hello1"));
-        Crypto.add(new Crypto("Hello2"));
-        Crypto.add(new Crypto("Hello3"));
-        Crypto.add(new Crypto("Hello4"));
-        Crypto.add(new Crypto("Hello5"));*/
-
-       /*
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));
-        Crypto.add(new Crypto(" 123","23 ",1));*/
-
-        Crypto.add(new Crypto(" Nameq ","Symbol ",1));
 
 
 
-        //arr.add( Crypto.get(0).getPrice());
+      /* //Place holder values to not use up API limit
+       Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        Crypto.add(new Crypto(" 123","23 ",1));
+        */
+
+        // Empty addition to the Crypto ArrayLit to initalize the array
+        Crypto.add(new Crypto("  "," ",1));
 
 
-       String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
+
+
+
+        //Reference for api JSON parsing  https://youtu.be/y2xtLqP8dSQ
+        //Documentation CMC API: https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest
+        //Building the API object
+        String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         RequestQueue queue = Volley.newRequestQueue(this);
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+                            //Getting the "data" array from the API
                             JSONArray dataArray = response.getJSONArray("data");
+                            //Iterating through the data array
                             for (int i = 0; i < dataArray.length(); i++) {
+
                                 JSONObject dataObj = dataArray.getJSONObject(i);
+                                // Getting the Name of the crypto from the data array
                                 String name = dataObj.getString("name");
+                                // Getting the Name of the crypto from the data array
                                 String symbol = dataObj.getString("symbol");
+                                // Getting the Quote Array from the API
                                 JSONObject quote = dataObj.getJSONObject("quote");
-
+                                // Getting the Price for the Crypto in USD from the quote array
                                 JSONObject USD = quote.getJSONObject("USD");
+                                //Getting the price and statically converting(price USD to CAD 4/14/2022) to Canadian dollar and rounding it
                                 double price = USD.getDouble("price");
-
                                 double priceToCAD =  (price * 1.26);
                                 double priceRounded = Math.round(priceToCAD);
+
+                                // Adding each Crypto to the ArrayList
                                 Crypto.add(new Crypto(name,symbol,priceRounded));
-                                arr.add(name);
-                                arr.add(symbol);
-
-                                arr.add(Double.toString(priceRounded));
 
 
-                                //
+
+
 
                             }
 
                         } catch (JSONException e) {
+                            //Error catch
                             e.printStackTrace();
                         }
                     }
@@ -157,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         }) {
+            // Passing the key as well as the API Key
             @Override
             public Map<String, String> getHeaders() {
 
@@ -177,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
 
 
 
