@@ -1,5 +1,6 @@
 package com.salmanvirji.testcryptov2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class Favorites extends AppCompatActivity {
 
     TextView txtSymbol , txtName,txtPrice,txtInput;
-    Button button;
+    Button button, btnHome;
     ArrayList<Crypto> q = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class Favorites extends AppCompatActivity {
         txtPrice =(TextView)findViewById(R.id.txtPrice);
         txtInput = (TextView)findViewById(R.id.txtInput);
         button = (Button)findViewById(R.id.btnEnter);
+        btnHome = (Button) findViewById(R.id.button4);
+        btnHome.setOnClickListener(v -> goHome());
 
         //get the bundle
         Bundle b = getIntent().getExtras();
@@ -43,7 +46,8 @@ public class Favorites extends AppCompatActivity {
         ArrayList<String> arr =new ArrayList<>();
 
         arr.add("Bitcoin");
-        arr.add(" 123");
+        arr.add("Tether");
+        arr.add("BNB");
 
 
         //For loop to iterate through the q arraylist which holds the crypto data from the parcelable intent
@@ -64,6 +68,12 @@ public class Favorites extends AppCompatActivity {
 
 
 
+    }
+
+    public void goHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

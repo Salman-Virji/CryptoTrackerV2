@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     Button btn2;
+    Button btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         btn2 =(Button) findViewById(R.id.button2);
         btn2.setOnClickListener(v -> openFavs());
 
+        btn3 =(Button) findViewById(R.id.button3);
+        btn3.setOnClickListener(v -> openSettings());
+
 
     }
 
@@ -57,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1 = new Intent(this, Favorites.class);
         //passing the Crypto array with the intent as a parcelable
         intent1.putParcelableArrayListExtra("Crypto", Crypto);
+        startActivity(intent1);
+        finish();
+    }
+
+    public void openSettings(){
+        // Intent to open the settings screen
+        Intent intent1 = new Intent(this, Settings.class);
         startActivity(intent1);
         finish();
     }

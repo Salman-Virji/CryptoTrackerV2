@@ -8,11 +8,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="300dp"
+        android:layout_width="322dp"
 
-        android:layout_height="72dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:focusable="auto"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:cardPreventCornerOverlap="true"
@@ -135,24 +136,32 @@
 
     <EditText
         android:id="@+id/txtInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
         android:ems="10"
+        android:hint="Enter Cypto Name"
         android:inputType="textPersonName"
-        android:text="Enter Cypto Name"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="@color/design_default_color_error"
+        android:textColorHint="#FAF6F6"
+        android:textColorLink="#881414"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <Button
         android:id="@+id/btnEnter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add"
+        app:backgroundTint="#881414"
+        app:cornerRadius="13dp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toEndOf="@+id/txtInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
