@@ -21,6 +21,9 @@
         <activity
             android:name=".Favorites"
             />
+        <activity
+            android:name=".Settings"
+            />
 
     </application>
 

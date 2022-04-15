@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void openSettings(){
         // Intent to open the settings screen
-        Intent intent1 = new Intent(this, Settings.class);
-        startActivity(intent1);
+        Intent intent2 = new Intent(this, Settings.class);
+        startActivity(intent2);
         finish();
     }
 
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-      /* //Place holder values to not use up API limit
+     //Place holder values to not use up API limit
        Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
-        */
+
 
         // Empty addition to the Crypto ArrayLit to initalize the array
         Crypto.add(new Crypto("  "," ",1));
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+ /*
         //Reference for api JSON parsing  https://youtu.be/y2xtLqP8dSQ
         //Documentation CMC API: https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest
         //Building the API object
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         }) {
-            // Passing the key as well as the API Key
+            // Passing the key as well as the API Key to access the API
             @Override
             public Map<String, String> getHeaders() {
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         };
-        queue.add(jsonObjectRequest);
+        queue.add(jsonObjectRequest); */
 
 
     }
