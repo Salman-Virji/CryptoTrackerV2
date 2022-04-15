@@ -15,7 +15,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     private ArrayList<Crypto> Crypto;
 
 
-    //when we create a instance of recycleradapter we have to have new instance of users
+    //Reference https://developer.android.com/guide/topics/ui/layout/recyclerview
     public recyclerAdapter(ArrayList<Crypto> Crypto){
         this.Crypto = Crypto;
 
@@ -29,9 +29,9 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTxt= itemView.findViewById(R.id.txtSymbol);
-            symbolTxt= itemView.findViewById(R.id.textView3);
-            priceTxt= itemView.findViewById(R.id.txtPrice);
+            nameTxt= itemView.findViewById(R.id.txtName1);
+            symbolTxt= itemView.findViewById(R.id.txtSymbol1);
+            priceTxt= itemView.findViewById(R.id.txtPrice1);
 
         }
     }
@@ -39,7 +39,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     @NonNull
     @Override
     public recyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.wordlist_item, parent,false);
+       View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cryptocard, parent,false);
        return new MyViewHolder(itemView);
     }
 
