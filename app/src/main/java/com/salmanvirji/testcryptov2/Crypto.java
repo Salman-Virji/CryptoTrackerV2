@@ -16,8 +16,6 @@ public class Crypto implements Parcelable {
         price = source.readDouble();
     }
 
-
-
     public String getSymbol() {
         return symbol;
     }

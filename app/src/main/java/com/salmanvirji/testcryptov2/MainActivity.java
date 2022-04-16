@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<Crypto> Crypto = new ArrayList<>();
 
-
     private RecyclerView recyclerView;
 
     Button btn2;
@@ -56,11 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnRefresh =(Button) findViewById(R.id.btnRefresh);
         btnRefresh.setOnClickListener(v -> setAdapter());
 
-
-
     }
-
-
 
     public void openFavs(){
         // Intent to open the favorites screen
@@ -78,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-
-
     //Adapter for the RecycleViewer
     //Reference: https://developer.android.com/guide/topics/ui/layout/recyclerview
     private void setAdapter() {
@@ -91,16 +84,13 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-
     public void getCrypto() {
         //Clear the list of all values
         Crypto.clear();
 
-
-
-/*
-     //Place holder values to not use up API limit
-       Crypto.add(new Crypto(" 123","23 ",1));
+        /*
+        //Place holder values to not use up API limit
+        Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));
@@ -110,14 +100,8 @@ public class MainActivity extends AppCompatActivity {
         Crypto.add(new Crypto(" 123","23 ",1));
         Crypto.add(new Crypto(" 123","23 ",1));*/
 
-
         // Empty addition to the Crypto ArrayLit to initalize the array
-        Crypto.add(new Crypto("Please Refresh  "," ",1));
-
-
-
-
-
+        Crypto.add(new Crypto("Please Refresh  "," ",0));
 
         //Reference for api JSON parsing  https://youtu.be/y2xtLqP8dSQ
         //Documentation CMC API: https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest
@@ -151,11 +135,6 @@ public class MainActivity extends AppCompatActivity {
 
                                 // Adding each Crypto to the ArrayList
                                 Crypto.add(new Crypto(name,symbol,priceRounded));
-
-
-
-
-
                             }
 
                         } catch (JSONException e) {
@@ -179,15 +158,10 @@ public class MainActivity extends AppCompatActivity {
                 return headers;
             }
 
-
-
-
         };
         queue.add(jsonObjectRequest);
 
-
     }
-
 
 }
 

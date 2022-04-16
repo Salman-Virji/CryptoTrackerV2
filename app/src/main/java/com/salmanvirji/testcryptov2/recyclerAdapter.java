@@ -14,11 +14,9 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
     private ArrayList<Crypto> Crypto;
 
-
     //Reference https://developer.android.com/guide/topics/ui/layout/recyclerview
     public recyclerAdapter(ArrayList<Crypto> Crypto){
         this.Crypto = Crypto;
-
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -32,7 +30,6 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
             nameTxt= itemView.findViewById(R.id.txtName1);
             symbolTxt= itemView.findViewById(R.id.txtSymbol1);
             priceTxt= itemView.findViewById(R.id.txtPrice1);
-
         }
     }
 

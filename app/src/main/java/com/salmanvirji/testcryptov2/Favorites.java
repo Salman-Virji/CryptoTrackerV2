@@ -40,19 +40,11 @@ public class Favorites extends AppCompatActivity {
         button =(Button) findViewById(R.id.btnEnter);
         button.setOnClickListener(v -> setFavs());
 
-
-
     }
-
 
     public void setFavs(){
 
         ArrayList<String> arr =new ArrayList<>();
-
-        //arr.add("Bitcoin");
-        //arr.add("Tether");
-        //arr.add("BNB");
-
 
        String name=  txtInput.getText().toString();
         arr.add(name);
@@ -69,11 +61,8 @@ public class Favorites extends AppCompatActivity {
                 txtSymbol.setText(q.get(i).getSymbol());
                 txtPrice.setText(Double.toString(q.get(i).getPrice()));
 
-
             }
         }
-
-
 
     }
 
