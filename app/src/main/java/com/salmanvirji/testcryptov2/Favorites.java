@@ -28,8 +28,9 @@ public class Favorites extends AppCompatActivity {
         btnHome = (Button) findViewById(R.id.button4);
         btnHome.setOnClickListener(v -> goHome());
 
-        btnHome = (Button) findViewById(R.id.button7);
-        btnHome.setOnClickListener(v -> goHome());
+        btnSettings = (Button) findViewById(R.id.button7);
+        btnSettings.setOnClickListener(v -> openSettings());
+
 
         //get the bundle
         Bundle b = getIntent().getExtras();
