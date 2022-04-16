@@ -46,13 +46,13 @@ public class Favorites extends AppCompatActivity {
 
         ArrayList<String> arr =new ArrayList<>();
 
-       String name=  txtInput.getText().toString();
+        String name=  txtInput.getText().toString();
         arr.add(name);
 
         //For loop to iterate through the q arraylist which holds the crypto data from the parcelable intent
         int i =0;
         for(int w =0 ; w<q.size(); w++){
-            //Iterating through that array which hold the names of favorited crypto
+            //Iterating through that array which hold the names of searched crypto
             for(int r = 0; r<arr.size(); r++){
                 //Matching the arr arraylist with the q array list if a match is found setText
                 if(q.get(w).getName().equals(arr.get(r)))

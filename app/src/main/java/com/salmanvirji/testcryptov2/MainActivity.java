@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFavs(){
-        // Intent to open the favorites screen
+        // Intent to open the search screen
         Intent intent1 = new Intent(this, Favorites.class);
         //passing the Crypto array with the intent as a parcelable
         intent1.putParcelableArrayListExtra("Crypto", Crypto);
