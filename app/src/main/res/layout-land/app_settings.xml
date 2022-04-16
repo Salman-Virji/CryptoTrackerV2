@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F61C6">
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:backgroundTint="#881414"
+        app:cornerRadius="15dp"
+        app:icon="@android:drawable/btn_star"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:backgroundTint="#881414"
+        app:cornerRadius="15dp"
+        app:icon="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:backgroundTint="#881414"
+        app:cornerRadius="15dp"
+        app:icon="@android:drawable/ic_dialog_info"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="0.1dp"
+        android:background="#881414"
+        android:gravity="center"
+        android:text="About "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/whitebackground"
+        android:layout_width="529dp"
+        android:layout_height="185dp"
+        android:layout_margin="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/portraitsettings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425"
+        app:shapeAppearanceOverlay="@style/roundimageview" />
+
+    <TextView
+        android:id="@+id/textViewAbout"
+        android:layout_width="93dp"
+        android:layout_height="25dp"
+        android:clickable="true"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="About"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground"
+        app:layout_constraintTop_toTopOf="@+id/whitebackground"
+        app:layout_constraintVertical_bias="0.038"
+        tools:text="About" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Created by:"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground"
+        app:layout_constraintTop_toTopOf="@+id/whitebackground"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ruslan Mastov"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Connor Pittman"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Salman Virji"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note: USD to CAD dollar value conversion "
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAbout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="  values taken at date 4/14/2022"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="  May not be accurate at time of viewing"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crypto API provided by CoinMarketCap"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whitebackground"
+        app:layout_constraintVertical_bias="0.888" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

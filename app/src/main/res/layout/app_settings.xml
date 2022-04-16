@@ -88,15 +88,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
-        android:layout_marginTop="388dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
         android:layout_marginBottom="22dp"
         android:text="Crypto API provided by CoinMarketCap"
         app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView8"
@@ -104,15 +105,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="82dp"
         android:layout_marginLeft="82dp"
-        android:layout_marginTop="162dp"
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="248dp"
         android:text="Connor Pittman"
         app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView7"
@@ -120,14 +122,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="82dp"
         android:layout_marginLeft="82dp"
-        android:layout_marginTop="143dp"
         android:layout_marginEnd="168dp"
         android:layout_marginRight="168dp"
         android:text="Ruslan Mastov"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewAbout"
@@ -153,13 +156,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="98dp"
         android:layout_marginEnd="214dp"
         android:layout_marginRight="214dp"
         android:text="App Created by:"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toTopOf="@+id/whitebackground"
+        app:layout_constraintVertical_bias="0.236" />
 
     <TextView
         android:id="@+id/textView12"
@@ -167,10 +172,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="212dp"
         android:layout_marginEnd="214dp"
         android:layout_marginRight="214dp"
         android:text="Note: USD to CAD dollar value conversion "
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
@@ -182,14 +187,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
-        android:layout_marginTop="228dp"
         android:layout_marginEnd="82dp"
         android:layout_marginRight="82dp"
         android:text="  values taken at date 4/14/2022"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
         android:id="@+id/textView15"
@@ -197,23 +203,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="244dp"
         android:layout_marginEnd="37dp"
         android:layout_marginRight="37dp"
         android:layout_marginBottom="166dp"
         android:text="  May not be accurate at time of viewing"
         app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
         app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/whitebackground"
-        app:layout_constraintTop_toTopOf="@+id/whitebackground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="185dp"
-        android:layout_marginRight="185dp"
         android:text="Salman Virji"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="@+id/whitebackground" />
+        app:layout_constraintBottom_toBottomOf="@+id/whitebackground"
+        app:layout_constraintEnd_toEndOf="@+id/whitebackground"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="@+id/whitebackground"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
