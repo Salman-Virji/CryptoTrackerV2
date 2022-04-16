@@ -45,7 +45,7 @@
         android:text="Button"
         app:backgroundTint="#881414"
         app:cornerRadius="15dp"
-        app:icon="@android:drawable/btn_star"
+        app:icon="@android:drawable/ic_menu_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintHorizontal_bias="0.55"

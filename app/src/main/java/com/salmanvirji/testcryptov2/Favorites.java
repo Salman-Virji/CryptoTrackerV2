@@ -49,10 +49,13 @@ public class Favorites extends AppCompatActivity {
 
         ArrayList<String> arr =new ArrayList<>();
 
-        arr.add("Bitcoin");
-        arr.add("Tether");
-        arr.add("BNB");
+        //arr.add("Bitcoin");
+        //arr.add("Tether");
+        //arr.add("BNB");
 
+
+       String name=  txtInput.getText().toString();
+        arr.add(name);
 
         //For loop to iterate through the q arraylist which holds the crypto data from the parcelable intent
         int i =0;

@@ -11,8 +11,8 @@
         android:layout_width="322dp"
 
         android:layout_height="71dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:focusable="auto"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109">
+        app:layout_constraintVertical_bias="0.374">
 
 
         <TextView
@@ -32,8 +32,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:id="@+id/txtSymbol"
@@ -45,7 +44,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="Please Search a Crypto" />
 
         <TextView
             android:id="@+id/txtPrice"
@@ -56,8 +55,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:id="@+id/txtPrice2"
@@ -79,7 +77,7 @@
         android:layout_marginTop="0.1dp"
         android:background="#881414"
         android:gravity="center"
-        android:text="Favorite List"
+        android:text="Search A Crypto"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -109,7 +107,7 @@
         android:text="Button"
         app:backgroundTint="#881414"
         app:cornerRadius="15dp"
-        app:icon="@android:drawable/btn_star"
+        app:icon="@android:drawable/ic_menu_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintHorizontal_bias="0.494"
@@ -150,10 +148,10 @@
 
     <Button
         android:id="@+id/btnEnter"
-        android:layout_width="85dp"
-        android:layout_height="48dp"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="10dp"
-        android:text="Add"
+        android:text="Search"
         app:backgroundTint="#881414"
         app:cornerRadius="13dp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
