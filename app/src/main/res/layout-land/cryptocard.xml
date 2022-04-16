@@ -36,7 +36,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtName1"
@@ -48,7 +48,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtPrice1"
@@ -60,7 +60,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtCAD1"

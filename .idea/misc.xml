@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout-land/activity_main.xml" value="0.35052083333333334" />
+        <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout-land/app_settings.xml" value="0.4691358024691358" />
+        <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout-land/cryptocard.xml" value="0.4691358024691358" />
+        <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout-land/fav_items.xml" value="0.35052083333333334" />
         <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout/activity_main.xml" value="0.2695035460992908" />
         <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout/app_settings.xml" value="0.3999094202898551" />
         <entry key="..\:/Programs/GitHub Repository/CryptoTrackerV2/app/src/main/res/layout/cryptocard.xml" value="0.2695035460992908" />

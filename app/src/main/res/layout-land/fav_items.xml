@@ -33,7 +33,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtSymbol"
@@ -45,7 +45,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtPrice"
@@ -57,7 +57,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="10dp"
-            android:text="Cryptos" />
+            android:text="" />
 
         <TextView
             android:id="@+id/txtPrice2"
@@ -79,7 +79,7 @@
         android:layout_marginTop="0.1dp"
         android:background="#881414"
         android:gravity="center"
-        android:text="Favorite List"
+        android:text="Search A Crypto"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -95,7 +95,7 @@
         android:text="Button"
         app:backgroundTint="#881414"
         app:cornerRadius="15dp"
-        app:icon="@android:drawable/btn_star"
+        app:icon="@android:drawable/ic_menu_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintHorizontal_bias="0.497"
@@ -135,7 +135,7 @@
         android:layout_width="386dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="Enter Cypto Name"
+        android:hint="Enter Crypto Name"
         android:inputType="textPersonName"
         android:textColor="#FBFBFB"
         android:textColorHighlight="@color/design_default_color_error"
@@ -150,10 +150,10 @@
 
     <Button
         android:id="@+id/btnEnter"
-        android:layout_width="85dp"
-        android:layout_height="48dp"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
         android:layout_marginBottom="4dp"
-        android:text="Add"
+        android:text="Search"
         app:backgroundTint="#881414"
         app:cornerRadius="13dp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
