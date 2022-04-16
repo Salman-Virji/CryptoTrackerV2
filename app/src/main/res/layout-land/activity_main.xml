@@ -11,22 +11,23 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="654dp"
-        android:layout_height="201dp"
+        android:layout_width="607dp"
+        android:layout_height="157dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:layout_marginTop="0.1dp"
+        android:layout_marginTop="0.0dp"
         android:background="#881414"
         android:gravity="center"
         android:text="Top Cryptocurrencies "
@@ -34,15 +35,30 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:backgroundTint="#881414"
+        app:cornerRadius="15dp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="64dp"
         android:layout_height="58dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
         android:layout_marginBottom="16dp"
         android:text="Button"
         app:backgroundTint="#881414"
@@ -50,20 +66,6 @@
         app:icon="@android:drawable/ic_dialog_dialer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="64dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="16dp"
-        android:text="Button"
-        app:backgroundTint="#881414"
-        app:cornerRadius="15dp"
-        app:icon="@android:drawable/btn_star"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button" />
 
     <Button
         android:id="@+id/button3"
@@ -75,11 +77,29 @@
         android:text="Button"
         app:backgroundTint="#881414"
         app:cornerRadius="15dp"
-        app:icon="@android:drawable/ic_menu_manage"
+        app:icon="@android:drawable/ic_dialog_info"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="66dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="338dp"
+        android:layout_marginLeft="338dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Button"
+        app:icon="@android:drawable/ic_popup_sync"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
